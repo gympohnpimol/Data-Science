@@ -9,8 +9,7 @@ st.write("""
 
 This app is to predict wine type.
 
-""")
-
+""") 
 st.sidebar.header("User Input Parameters")
 
 def user_input_feature():
