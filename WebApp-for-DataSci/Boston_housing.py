@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import shap
 import matplotlib.pyplot as plt
-import sklearn as datasets
+from sklearn import datasets
 from sklearn.ensemble import RandomForestRegressor
 
 st.write("""Boston House Price Prediction App""")
@@ -10,7 +10,7 @@ st.write("""Boston House Price Prediction App""")
 #data downloads
 df = datasets.load_boston()
 X = pd.DataFrame(df.data, columns = df.feature_names)
-Y = pd.DataFrame(df.data, columns = ["MEDV"])
+Y = pd.DataFrame(df.target, columns = ["MEDV"])
 
 #sidebar
 st.sidebar.header("Special Input Parameters")
